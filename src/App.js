@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'normalize.css';
+import 'flexboxgrid';
 import './scss/style.scss';
 import Error from './pages/error';
 import SBox from './pages/searchbox';

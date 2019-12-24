@@ -6,3 +6,12 @@ yarn.lock
 # BUILD
 
 build/
+
+# EDITOR
+
+.vscode/
+.idea/
+
+# TESTS
+
+coverage/

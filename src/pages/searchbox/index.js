@@ -1,9 +1,11 @@
 import React from 'react';
 
 const SBox = () => (
-    <>
-        <p>Pagina de caja de busqueda</p>
-    </>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">Responsive</div>
+        </div>
+    </div>
 );
 
 export default SBox;
