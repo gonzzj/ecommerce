@@ -5,7 +5,7 @@ import Column from '../../grid/column';
 import Button from '../../button';
 
 const Detail = ({ item }) => (
-    <article className={'product__detail'}>
+    <article className={'product product__big'}>
         <Row>
             <Column xs={'8'}>
                 <img className={'product__image'} src="https://t3.ftcdn.net/jpg/02/12/43/28/240_F_212432820_Zf6CaVMwOXFIylDOEDqNqzURaYa7CHHc.jpg" alt=""/>
@@ -14,7 +14,7 @@ const Detail = ({ item }) => (
                 <span className={'product__auxiliary'}>Nuevo - 244 vendidos</span>
                 <h2 className={'product__name'}>Apple Ipod Touch</h2>
                 <p className={'product__price'}>$ 3.444</p>
-                <Button label={'Comprar'}/>
+                <Button label={'Comprar'} classButton={'primary'} onClick={() => alert("Compraste el producto")}/>
             </Column>
         </Row>
         <Row>

@@ -1,0 +1,24 @@
+// --- PARTIALS: BREADCRUMB ---
+
+.breadcrumb {
+    margin-bottom: 24px; 
+    color: $ml-breadcrumb-link; 
+      
+    &__link {
+        font-size: 14px;
+        color: $ml-breadcrumb-link; 
+        transition: color 200ms ease;
+
+        &:first-child {
+            margin-right: 12px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 12px;
+        }
+
+        &:hover {
+            color: $ml-breadcrumb-link-hover;
+        }
+    }
+}

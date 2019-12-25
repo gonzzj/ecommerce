@@ -2,15 +2,24 @@
 
 .product {
     background-color: #fff;
-    border-radius: 8px;
+    padding: 24px;
 
-    ul {
+    &__list ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        border-radius: 8px;
 
         li {
-            padding: 24px 18px;
+            &:first-child article {
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+            
+            &:last-child article {
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
 
             &:not(:last-child) {
                 border-bottom: 1px solid #eee;  
@@ -22,19 +31,33 @@
         width: 100%;
     }
 
-    &__price {
-        font-size: 24px;
+    &__small {
+        .product {
+            &__price {
+                font-size: 32px;
+                margin: 0 0 12px 0;
+            }
+        
+            &__name {
+                font-size: 18px;
+            }
+        }
     }
+    
+    &__big {
+        .product {
+            &__auxiliary {
+                font-size: 14px;
+            }
 
-    &__name {
-        font-size: 18px;
-    }
-
-    &__city {
-        font-size: 14px;
-    }
-
-    &__detail {
-        padding: 24px;
+            &__price {
+                font-size: 48px;
+                margin-top: 24px;
+            }
+        
+            &__name, &__subtitle {
+                font-size: 24px;
+            }
+        }
     }
 }

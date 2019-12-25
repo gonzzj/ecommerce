@@ -10,7 +10,7 @@ const ProductDetail = () => (
       <Header/>
       <main>
          <Container>
-            <section className={'product'}>
+            <section>
                <Row>
                   <Column xs={'12'}>
                      <Detail/>

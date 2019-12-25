@@ -1,9 +1,14 @@
 // --- PARTIALS: GLOBAL
 
-input, h1, h2, h3, h4, h5, h6, p, span {
+input, h1, h2, h3, h4, h5, h6, p, span, button, a {
     font-family: sans-serif;
 }
 
 body {
     background-color: $ml-main;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
 }

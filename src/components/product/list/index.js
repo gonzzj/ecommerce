@@ -4,7 +4,7 @@ import Row from '../../grid/row';
 import Column from '../../grid/column';
 
 const Detail = ({ item }) => (
-    <article className={'product__list'}>
+    <article className={'product product__small'}>
         <Row>
             <Column xs={'3'}>
                 <img className={'product__image'} src="https://t3.ftcdn.net/jpg/02/12/43/28/240_F_212432820_Zf6CaVMwOXFIylDOEDqNqzURaYa7CHHc.jpg" alt="" />

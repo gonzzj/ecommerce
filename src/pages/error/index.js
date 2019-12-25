@@ -1,9 +1,14 @@
 import React from 'react';
+import Header from '../../components/header';
+import Container from '../../components/container';
 
-const Error = () => (
+const SBox = () => (
     <>
-        <p>Pagina de error</p>
+        <Header/>
+        <Container>
+            <h1>Error - 404: La página no fue encontrada</h1>
+        </Container>
     </>
 );
 
-export default Error;
+export default SBox;
