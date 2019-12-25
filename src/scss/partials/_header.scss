@@ -4,6 +4,7 @@
     background-color: $ml-yellow;
     height: 56px;
     width: 100%;
+    margin-bottom: 24px;
 
     .row {
         height: 56px;
@@ -16,9 +17,5 @@
         height: 34px;
         position: absolute;
         top: 10px;
-    }
-
-    &__search {
-        
     }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Column = props => {
-    const { xs, sm, md, lg, children } = props;  
+    const { xs, children } = props;  
 
     const colXS = 'col-xs' + (xs && '-' + xs);
 
