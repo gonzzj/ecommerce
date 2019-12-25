@@ -1,11 +1,8 @@
 import React from 'react';
+import Header from '../../components/header';
 
 const SBox = () => (
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="box">Responsive</div>
-        </div>
-    </div>
+   <Header/>
 );
 
 export default SBox;
