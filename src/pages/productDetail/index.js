@@ -18,6 +18,7 @@ const ProductDetail = ({match: { params: { id }}}) => {
          const res = await fetch(`${process.env.REACT_APP_PATH_SERVICE}/api/items/${id}`);
          const data = await res.json();
          
+         console.log(data);
          setEndReq(true);
          setProduct(data);
       };

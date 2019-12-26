@@ -2,6 +2,7 @@ const messages = {
     default: {
         label : {
             ARS: "$",
+            USD: "U$S",
             error404: "Error - 404: La página no fue encontrada",
             headerLogo: "Mercado Libre Argentina - Donde comprar y vender de todo",
             productsNotFound: "No se encontraron productos",
