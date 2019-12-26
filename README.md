@@ -1,7 +1,6 @@
 # ml-ecommerce
 
 - Responsive
-- Node
-- Endpoints
-- Tests?
-- Redux?
+- Categories - breadcrumb
+- Tests? no
+- Redux? no
