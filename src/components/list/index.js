@@ -6,10 +6,8 @@ const List = props => {
 
     return (
         <ul>
-            <li><Component /></li>
-            <li><Component /></li>
             {items.map(item => 
-                <li></li>
+                <li key={item.id}><Component item={item}/></li>
             )}
         </ul>
     )

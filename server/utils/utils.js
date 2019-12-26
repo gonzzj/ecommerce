@@ -21,6 +21,6 @@ exports.parseProduct = item => {
         "picture": item.thumbnail,
         "condition": item.condition,
         "free_shipping": item.shipping.free_shipping,
-        "sold_quantity": item.sold_quantity,
+        "sold_quantity": item.sold_quantity
     };
 };

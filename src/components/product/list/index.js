@@ -3,22 +3,22 @@ import PropTypes from 'prop-types';
 import Row from '../../grid/row';
 import Column from '../../grid/column';
 
-const Detail = ({ item }) => (
-    <article className={'product product__small'}>
+const Detail = ({ item }) => {
+    return (<article className={'product product__small'}>
         <Row>
             <Column xs={'3'}>
-                <img className={'product__image'} src="https://t3.ftcdn.net/jpg/02/12/43/28/240_F_212432820_Zf6CaVMwOXFIylDOEDqNqzURaYa7CHHc.jpg" alt="" />
+                <a href={"/items/" + item.id}><img className={'product__image'} src={item.picture} alt={item.title} /></a>
             </Column>
             <Column xs={'6'}>
-                <h4 className={'product__price'}>$ 3.444</h4>
-                <p className={'product__name'}>Apple Ipod Touch</p>
+                <h4 className={'product__price'}>{item.price.currency + " " + item.price.amount}</h4>
+                <a href={"/items/" + item.id} className={'product__name'}>{item.title}</a>
             </Column>
             <Column xs={'3'}>
-                <span className={'product__city'}>Capital Federal</span>
+                <span className={'product__shipping'}>{item.free_shipping && "¡Envio gratis!"}</span>
             </Column>
         </Row>
-    </article>
-);
+    </article>);
+};
 
 Detail.propTypes = {
     item: PropTypes.object

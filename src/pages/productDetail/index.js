@@ -1,25 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/header';
 import Container from '../../components/container';
 import Detail from '../../components/product/detail';
 import Row from '../../components/grid/row';
 import Column from '../../components/grid/column';
+import { isEmpty } from 'lodash';
 
-const ProductDetail = () => (
-   <>
-      <Header/>
-      <main>
-         <Container>
-            <section>
-               <Row>
-                  <Column xs={'12'}>
-                     <Detail/>
-                  </Column>
-               </Row>
-            </section>
-         </Container>
-      </main>
-   </>
-);
+const ProductDetail = ({match: { params: { id }}}) => {
+   const [product, setProduct] = useState({});
+
+   useEffect(() => {
+      const fetchProduct = async () => {
+         const res = await fetch(`${process.env.REACT_APP_PATH_SERVICE}/api/items/${id}`);
+         const data = await res.json();
+         
+         setProduct(data);
+      };
+
+      fetchProduct();
+   }, [id]);
+
+   return (
+      <>
+         <Header/>
+         <main>
+            <Container>
+               <section>
+                  <Row>
+                     <Column xs={'12'}>
+                        {!isEmpty(product) && <Detail product={product}/>}
+                     </Column>
+                  </Row>
+               </section>
+            </Container>
+         </main>
+      </>
+   );
+};
 
 export default ProductDetail;
