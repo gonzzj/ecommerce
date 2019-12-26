@@ -28,7 +28,7 @@ const ProductDetail = ({match: { params: { id }}}) => {
                <section>
                   <Row>
                      <Column xs={'12'}>
-                        {!isEmpty(product) && <Detail product={product}/>}
+                        {!isEmpty(product) && (product.status !== 404 ? <Detail product={product}/> : <span>El código del producto no existe</span>)}
                      </Column>
                   </Row>
                </section>

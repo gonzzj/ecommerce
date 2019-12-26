@@ -1,0 +1,10 @@
+// --- VARIABLES: BREAKPOINTS ---
+
+$phone: 320;
+$tablet: 768;
+$desktop: 1024;
+$desktop-xl: 1200;
+
+$max-phone: $tablet - 1;
+$max-tablet: $desktop - 1;
+$max-desktop: $desktop-xl - 1;

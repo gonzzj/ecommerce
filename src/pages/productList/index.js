@@ -8,6 +8,7 @@ import Column from '../../components/grid/column';
 import Breadcrumb from '../../components/breadcrumb';
 
 const ProductList = () => {
+   const [endReq, setEndReq] = useState(false);
    const [products, setProducts] = useState([]);
 
    useEffect(() => {
@@ -16,6 +17,7 @@ const ProductList = () => {
          const res = await fetch(`${process.env.REACT_APP_PATH_SERVICE}/api/items?q=${urlParams.get('search')}`);
          const data = await res.json();
          
+         setEndReq(true);
          setProducts(data.items);
       }
       
@@ -35,7 +37,10 @@ const ProductList = () => {
                   </Row>
                   <Row>
                      <Column>
-                        <List items={products} Component={Article}/>
+                        {endReq && (products.length > 0 
+                           ? <List items={products} Component={Article}/>
+                           : <span>No se encontraron productos</span>
+                        )}
                      </Column>
                   </Row>
                </section>

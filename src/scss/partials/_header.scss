@@ -2,20 +2,27 @@
 
 .header {
     background-color: $ml-yellow;
-    height: 56px;
     width: 100%;
     margin-bottom: 24px;
+    height: 56px;
 
     .row {
         height: 56px;
     }
 
     &__logo {
-        background: url($ml-logo) no-repeat;
+        background: url($ml-logo-mobile) no-repeat;
         text-indent: -1000px;
-        width: 134px;
+        width: 44px;
         height: 34px;
-        position: absolute;
+        position: absolute;            
         top: 10px;
+        -webkit-background-size: 44px 31px;
+        background-size: 44px 31px;
+
+        @include tablet {
+            width: 134px;
+            background: url($ml-logo) no-repeat;
+        }
     }
 }

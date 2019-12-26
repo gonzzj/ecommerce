@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 const InputText = props => {
-	const { disabled, onChange, value, placeholder, classInput } = props;
+	const { disabled, value, placeholder, classInput, onKeyDown } = props;
+	const [inputValue, setInputValue] = useState(value);
+
+	const handleChange = e => {
+		setInputValue(e.target.value);
+	};
 
 	return (
-		<input type="text" name="fname" value={value} placeholder={placeholder} className={'input' + (classInput && ' ' + classInput)} disabled={disabled} onChange={onChange}/>
+		<input type="text" name="fname" value={inputValue} placeholder={placeholder} className={'input' + (classInput && ' ' + classInput)} disabled={disabled} onChange={handleChange} onKeyDown={onKeyDown} />
 	);
 };
 
@@ -14,15 +19,14 @@ InputText.propTypes = {
     value: PropTypes.string,
 	placeholder: PropTypes.string,
     classInput: PropTypes.string,
-	onChange: PropTypes.func
+	onKeyDown: PropTypes.func
 };
 
 InputText.defaultProps = {
 	disabled: false,
 	value: '',
     placeholder: '',
-    classInput: '',
-	onChange: () => console.log("Trigger Event")
+    classInput: ''
 };
 
 export default InputText;

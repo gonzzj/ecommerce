@@ -2,12 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Column = props => {
-    const { xs, children } = props;  
+    const { xs, sm, md, lg, children } = props;  
 
     const colXS = 'col-xs' + (xs && '-' + xs);
+    const colSM = 'col-sm' + (sm && '-' + sm);
+    const colMD = 'col-md' + (md && '-' + md);
+    const colLG = 'col-lg' + (lg && '-' + lg);
 
     return (
-        <div className={colXS}>
+        <div className={[colXS, colSM, colMD, colLG].join(' ')}>
             {children}
         </div>   
     )       

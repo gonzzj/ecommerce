@@ -1,6 +1,7 @@
 // -- PARTIALS: CONTAINER --
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
+    margin: auto;
+    max-width: 1200px;
+    padding: 0 16px;
 }

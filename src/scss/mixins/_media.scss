@@ -1,0 +1,29 @@
+// --- MIXINS: MEDIA ---
+
+// -- MIXIN: MEDIA --
+
+@import "../variables/breakpoints";
+
+@mixin phone() {
+  @media (max-width: $max-phone + px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: $tablet + px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: $desktop + px) {
+    @content;
+  }
+}
+
+@mixin desktop-xl() {
+  @media (min-width: $desktop-xl + px) {
+    @content;
+  }
+}
