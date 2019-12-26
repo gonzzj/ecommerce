@@ -1,8 +1,6 @@
 # ML-Ecommerce
-- Responsive
 - Categories - breadcrumb
-
-- loading??
+- message
 
 ## Available scripts
 

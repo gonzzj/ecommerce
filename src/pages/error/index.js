@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../../components/header';
 import Container from '../../components/container';
+import { getMessageLabel } from '../../messages/messages';
 
 const SBox = () => (
     <>
         <Header/>
         <Container>
-            <h1>Error - 404: La página no fue encontrada</h1>
+            <h2>{getMessageLabel('error404')}</h2>
         </Container>
     </>
 );

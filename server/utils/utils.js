@@ -15,8 +15,7 @@ exports.parseProduct = item => {
         "title": item.title,
         "price": {
             "currency": item.currency_id,
-            "amount": item.price,
-            "decimals": 0
+            "amount": item.price
         },
         "picture": item.thumbnail,
         "condition": item.condition,

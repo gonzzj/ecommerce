@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactLoading from 'react-loading';
 import Header from '../../components/header';
 import List from '../../components/list';
 import Container from '../../components/container';
@@ -6,6 +7,7 @@ import Article from '../../components/product/list';
 import Row from '../../components/grid/row';
 import Column from '../../components/grid/column';
 import Breadcrumb from '../../components/breadcrumb';
+import { getMessageLabel } from '../../messages/messages';
 
 const ProductList = () => {
    const [endReq, setEndReq] = useState(false);
@@ -37,10 +39,10 @@ const ProductList = () => {
                   </Row>
                   <Row>
                      <Column>
-                        {endReq && (products.length > 0 
+                        {endReq ? (products.length > 0 
                            ? <List items={products} Component={Article}/>
-                           : <span>No se encontraron productos</span>
-                        )}
+                           : <span>{getMessageLabel('productsNotFound')}</span>
+                        ): <ReactLoading className={"loading__spinner"} type={'spin'} color={'#999'} height={125} width={125} />}
                      </Column>
                   </Row>
                </section>

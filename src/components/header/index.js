@@ -1,4 +1,5 @@
 import React from 'react';
+import { getMessageLabel, getMessagePlaceholder } from '../../messages/messages';
 import Container from '../container';
 import Row from '../grid/row';
 import Column from '../grid/column';
@@ -19,10 +20,10 @@ const Header = () => {
             <Container>
                 <Row align={"middle-xs"}>
                     <Column xs={'2'} sm={'3'} md={'2'} lg={'2'}>
-                        <a href="/" className={'header__logo'}>Mercado Libre Argentina - Donde comprar y vender de todo</a>
+                        <a href="/" className={'header__logo'}>{getMessageLabel("headerLogo")}</a>
                     </Column>
                     <Column xs={'10'} sm={'9'} md={'10'} lg={'10'}>
-                        <InputText classInput={'header__search'} value={searchValue} placeholder={'Buscar productos, marcas y más...'} onKeyDown={handleKey} />
+                        <InputText classInput={'header__search'} value={searchValue} placeholder={getMessagePlaceholder("searchPlaceholder")} onKeyDown={handleKey} />
                     </Column>
                 </Row>
             </Container>
