@@ -1,6 +1,4 @@
 # ML-Ecommerce
-- Categories - breadcrumb
-- message
 
 ## Available scripts
 
