@@ -1,4 +1,4 @@
-# ML-Ecommerce
+# Ecommerce
 
 ## Available scripts
 
