@@ -1,5 +1,11 @@
 # Ecommerce
 
+Dependencies:
+- Node v12.14.1
+- npm 6.13.4
+
+To start the project, it's needed to install every node package with `npm install`, then use the `npm run debug` script to initialize the app server and `npm run start` to initialize the app client.
+
 ## Available scripts
 
 ### npm run debug
