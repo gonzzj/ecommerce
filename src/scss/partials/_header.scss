@@ -3,7 +3,6 @@
 .header {
     background-color: $ml-yellow;
     width: 100%;
-    margin-bottom: 24px;
     height: 56px;
 
     .row {
@@ -11,18 +10,59 @@
     }
 
     &__logo {
-        background: url($ml-logo-mobile) no-repeat;
-        text-indent: -1000px;
-        width: 44px;
+        background-image: url($ml-logo);
+        background-repeat: no-repeat;
+        background-size: contain;
         height: 34px;
-        position: absolute;            
-        top: 10px;
-        -webkit-background-size: 44px 31px;
-        background-size: 44px 31px;
+        position: relative;
+        display: block;
+    }
 
-        @include tablet {
-            width: 134px;
-            background: url($ml-logo) no-repeat;
+    &__search {
+        display: inline-flex;
+        width: 100%;
+    
+        input {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            box-shadow: none;
+            text-shadow: none;
+            border: 1px solid $ml-input-border;
+            border-right: none;
+            padding: 12px;
+            box-sizing: border-box;
+            outline: none;
+            color: $ml-input-color;
+            line-height: 18px;
+            width: 100%;
+
+            &::placeholder {
+                color: $ml-input-placeholder;
+            }
+        }
+
+        &--glass {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            width: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $ml-main;
+            border: 1px solid $ml-input-border;
+            transition: 200ms ease-in background-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #e6e6e6;
+            }
+    
+            span {
+                width: 20px;
+                height: 20px;
+                background: url($ml-glass) no-repeat;
+                background-size: 20px;
+            }
         }
     }
 }

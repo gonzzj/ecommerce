@@ -1,7 +1,7 @@
 // --- PARTIALS: BREADCRUMB ---
 
 .breadcrumb {
-    margin-bottom: 24px; 
+    margin: 16px 0; 
     color: $ml-breadcrumb-link; 
       
     &__link {
@@ -9,16 +9,25 @@
         color: $ml-breadcrumb-link; 
         transition: color 200ms ease;
 
-        &:first-child {
-            margin-right: 12px;
-        }
-
-        &:not(:first-child) {
-            margin-left: 12px;
-        }
-
         &:hover {
             color: $ml-breadcrumb-link-hover;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    span {
+        display: inline-flex;
+        align-items: center;
+
+        p {
+            margin: 0 12px;
+        }
+
+        &:last-child p {
+            display: none;
         }
     }
 }

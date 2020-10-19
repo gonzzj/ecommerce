@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../../components/header';
-import Container from '../../components/container';
+import Header from '../../components/molecules/header';
+import Container from '../../components/atoms/container';
 import { getMessageLabel } from '../../messages/messages';
 
 const SBox = () => (

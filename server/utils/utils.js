@@ -23,3 +23,26 @@ exports.parseProduct = item => {
         "sold_quantity": item.sold_quantity
     };
 };
+
+exports.getCategory = results => {
+    const categories = new Map();
+    let resultCat = '';
+    let resultCatQuant = 0;
+
+    for (const item of results) {
+        if (categories.has(item.category_id)) {
+            categories.set(item.category_id, categories.get(item.category_id) + 1);
+        } else {
+            categories.set(item.category_id, 1);
+        }
+    }
+
+    for (const [category, quantity] of categories) {
+        if (quantity > resultCatQuant) {
+            resultCatQuant = quantity;
+            resultCat = category;
+        }
+    }
+
+    return resultCat;
+};

@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../components/header';
+import Header from '../../components/molecules/header';
 
 const SBox = () => (
-   <Header/>
+   <Header />
 );
 
 export default SBox;

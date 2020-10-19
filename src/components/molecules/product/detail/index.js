@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Row from '../../grid/row';
-import Column from '../../grid/column';
-import Button from '../../button';
-import { getMessageLabel } from '../../../messages/messages';
+import Row from '../../../atoms/grid/row';
+import Column from '../../../atoms/grid/column';
+import Button from '../../../atoms/button';
+import { getMessageLabel } from '../../../../messages/messages';
 
 const Detail = ({ product }) => (
     <article className={'product product__big'}>
         <Row>
-            <Column xs={'12'} lg={'8'}>
+            <Column xs={12} lg={8}>
                 <img className={'product__image'} src={product.item.picture} alt={product.item.title}/>
             </Column>
-            <Column xs={'12'} lg={'4'}>
+            <Column xs={12} lg={4}>
                 <span className={'product__auxiliary'}>{getMessageLabel(product.item.condition) + (product.item.sold_quantity ? " - " + product.item.sold_quantity + " " + getMessageLabel('productSells') : '')}</span>
                 <h2 className={'product__name'}>{product.item.title}</h2>
                 <p className={'product__price'}>{getMessageLabel(product.item.price.currency) + " " + product.item.price.amount}</p>
@@ -19,7 +19,7 @@ const Detail = ({ product }) => (
             </Column>
         </Row>
         <Row>
-            <Column xs={'12'} lg={'12'}>
+            <Column xs={12} lg={10}>
                 <h3 className={'product__subtitle'}>{getMessageLabel('productDescription')}</h3>
                 <p className={'product__description'}>{product.item.description}</p>
             </Column>

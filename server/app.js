@@ -5,14 +5,14 @@ const bodyParser = require('body-parser');
 const pino = require('express-pino-logger')();
 const compress = require('compression');
 const app = express();
-const products = require('./services/products');
+const routes = require('./routes/api');
 
 app.use(compress());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(pino);
 
-app.get('/api/items', products.getProducts);
-app.get('/api/items/:id', products.getProduct);
+app.get('/api/items', routes.getProducts);
+app.get('/api/items/:id', routes.getProduct);
 
 module.exports = app;

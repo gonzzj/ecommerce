@@ -15,7 +15,7 @@ const messages = {
             freeShipping: "¡Envío gratis!"
         },
         placeholder: {
-            searchPlaceholder: "Buscar productos, marcas y más..."
+            searchPlaceholder: "Nunca dejes de buscar..."
         }
     }
 };
