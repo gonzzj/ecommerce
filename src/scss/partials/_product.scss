@@ -95,15 +95,19 @@
                 font-size: 24px;
             }
 
+            &__subtitle, &__description {
+                @include tablet {
+                    margin-left: 32px;
+                }
+            }
+
             &__subtitle {
                 font-size: 28px;
-                margin-left: 32px;
                 font-weight: 500;
             }
 
             &__description {
-                margin-left: 32px;
-                color: $ml-text-color2;
+                color: $ml-text-color2;   
             }
         }
     }

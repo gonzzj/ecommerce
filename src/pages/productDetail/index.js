@@ -34,12 +34,12 @@ const ProductDetail = ({match: { params: { id }}}) => {
             <Container>
                <section>
                   <Row>
-                     <Column offset={1}>
+                     <Column offset={1} xs={12} sm={12} md={10} lg={10}>
                         <Breadcrumb items={breadcrumb} />
                      </Column>
                   </Row>
                   <Row>
-                     <Column xs={10} sm={10} md={10} lg={10} offset={1}>
+                     <Column xs={12} sm={12} md={10} lg={10} offset={1}>
                         {endReq ? (!isEmpty(product) && (product.status !== 404 ? <Detail product={product}/> : <span>{getMessageLabel('productNotFound')}</span>)) 
                            : <ReactLoading className={"loading__spinner"} type={'spin'} color={'#999'} height={125} width={125} />}
                      </Column>

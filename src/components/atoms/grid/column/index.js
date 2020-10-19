@@ -11,7 +11,7 @@ const Column = props => {
 
     return (
         <>
-            {offset && <div className={'col-xs-' + offset}></div>}
+            {offset && <div className={'col-xs-' + offset + ' col-offset' }></div>}
             <div className={[colXS, colSM, colMD, colLG].join(' ')}>
                 {children}
             </div>   

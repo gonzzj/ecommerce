@@ -20,10 +20,10 @@ const Header = () => {
         <header className={'header'}>
             <Container>
                 <Row align={"middle-xs"}>
-                    <Column xs={1} sm={1} md={1} lg={1} offset={1}>
+                    <Column xs={2} sm={2} md={1} lg={1} offset={1}>
                         <a href="/" className={'header__logo'}></a>
                     </Column>
-                    <Column xs={9} sm={9} md={9} lg={9}>
+                    <Column xs={10} sm={10} md={9} lg={9}>
                         <div className={'header__search'}>
                             <InputText value={searchValue} placeholder={getMessagePlaceholder("searchPlaceholder")} onChange={e => setSearchValue(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleRedirect()} />
                             <div className={"header__search--glass"} onClick={() => handleRedirect()}>

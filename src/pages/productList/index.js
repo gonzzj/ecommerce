@@ -35,12 +35,12 @@ const ProductList = () => {
             <Container>
                <section className={'product__list'}>
                   <Row>
-                     <Column offset={1} xs={10} sm={10} md={10} lg={10}>
+                     <Column offset={1} xs={12} sm={12} md={10} lg={10}>
                         {breadcrumb.length > 0 && <Breadcrumb items={breadcrumb} />}
                      </Column>
                   </Row>
                   <Row>
-                     <Column offset={1} xs={10} sm={10} md={10} lg={10}>
+                     <Column offset={1} xs={12} sm={12} md={10} lg={10}>
                         {endReq ? (products.length > 0 
                            ? <List items={products} Component={Article}/>
                            : <span>{getMessageLabel('productsNotFound')}</span>
